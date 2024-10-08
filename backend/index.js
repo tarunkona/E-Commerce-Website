@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 
 // Datbase Connection with MongoDB
-mongoose.connect("mongodb+srv://tarunsai2203:***REMOVED***@cluster0.5msq7.mongodb.net/e-commerce");
+mongoose.connect("mongodb+srv://tarunsai2203:<MyPassWord>@cluster0.5msq7.mongodb.net/e-commerce");
 
 
 //API Creation
