@@ -4,15 +4,19 @@ import jwt from "jsonwebtoken";
 import multer from "multer";
 import path from "path";
 import cors from "cors";
+import dotenv from 'dotenv';
 
+dotenv.config();
 const port = 4000;
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 
+
 // Datbase Connection with MongoDB
-mongoose.connect("mongodb+srv://tarunsai2203:***REMOVED***@cluster0.5msq7.mongodb.net/e-commerce");
+const mongoPassword = process.env.MONGO_PASSWORD;
+mongoose.connect(`mongodb+srv://tarunsai2203:${mongoPassword}@cluster0.5msq7.mongodb.net/e-commerce`);
 
 
 //API Creation
